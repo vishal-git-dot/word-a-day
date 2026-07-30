@@ -1,0 +1,49 @@
+name: Word of the Day
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Every day at 6:00 AM UTC
+  workflow_dispatch:       # Manual trigger anytime
+
+jobs:
+  word-of-the-day:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch word and update file
+        run: |
+          DATE=$(date '+%Y-%m-%d')
+
+          # Fetch random word data from Free Dictionary API
+          WORD_DATA=$(curl -s "https://api.dictionaryapi.dev/api/v2/entries/en/$(curl -s 'https://random-word-api.herokuapp.com/word' | tr -d '[""]')")
+
+          WORD=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['word'])" 2>/dev/null)
+          PHONETIC=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0].get('phonetic','N/A'))" 2>/dev/null)
+          WORD_TYPE=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['partOfSpeech'])" 2>/dev/null)
+          DEFINITION=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['definitions'][0]['definition'])" 2>/dev/null)
+          EXAMPLE=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['definitions'][0].get('example','No example available.'))" 2>/dev/null)
+
+          # Append to WORD-OF-THE-DAY.md
+          cat >> WORD-OF-THE-DAY.md << EOF
+
+          ---
+          ### 📅 $DATE
+          ## 📖 $WORD
+          - 🔊 **Pronunciation:** $PHONETIC
+          - 🏷️ **Type:** $WORD_TYPE
+          - 📝 **Definition:** $DEFINITION
+          - 💬 **Example:** *$EXAMPLE*
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "vishal-git-dot"
+          git config user.email "214489076+vishal-git-dot@users.noreply.github.com"
+          git add WORD-OF-THE-DAY.md
+          git commit -m "📖 Word of the Day: $(date '+%Y-%m-%d')"
+          git push
