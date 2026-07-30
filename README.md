@@ -79,8 +79,15 @@ Every day at 6 AM UTC
            │
            ▼
 ┌──────────────────────┐
-│  Fetches a random    │
-│  word from free API  │
+│  Picks word from     │
+│  built-in curated    │
+│  list (day of year)  │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│  Fetches definition  │
+│  from dictionary API │
 │  (dictionaryapi.dev) │
 └──────────┬───────────┘
            │
@@ -137,14 +144,20 @@ That's it. The workflow runs automatically from the next scheduled time. ✅
 
 ---
 
-## 🆓 APIs used (all free, no key needed)
+## 🆓 How words are chosen (no API needed)
 
-| API | Purpose |
-|---|---|
-| [random-word-api.herokuapp.com](https://random-word-api.herokuapp.com) | Picks a random English word |
-| [dictionaryapi.dev](https://dictionaryapi.dev) | Fetches definition, pronunciation, type & example |
+The workflow uses a **built-in curated list of 70+ words** stored directly in the workflow file. Each day, the word is picked based on the **day of the year** — so day 1 gets word 1, day 2 gets word 2, and so on. Once the list cycles through, it starts over.
 
-Both are completely free with no signup or API key required.
+This approach is:
+- ✅ **100% reliable** — no external API can go down
+- ✅ **No signup or API key** needed for word selection
+- ✅ **Predictable** — same word on the same day every year
+
+The definition, pronunciation, type, and example are then fetched from:
+
+| API | Purpose | Cost |
+|---|---|---|
+| [dictionaryapi.dev](https://dictionaryapi.dev) | Fetches full word details | Free, no key |
 
 ---
 
@@ -157,6 +170,17 @@ Both are completely free with no signup or API key required.
 - ✅ The commit email **matches your GitHub account email**
 
 Each daily commit = one green square on your contribution graph.
+
+---
+
+## 🛠️ Troubleshooting
+
+| Issue | Cause | Fix |
+|---|---|---|
+| `exit code 1` error | Old random word API was unreliable | ✅ Fixed — now uses built-in word list |
+| Commit not showing on profile | Wrong email in git config | Use your GitHub no-reply email |
+| Workflow not running | Permissions not set | Enable Read & write in Settings → Actions → General |
+| Push rejected | Branch protection or wrong permissions | Check Workflow permissions are set to Read & write |
 
 ---
 
