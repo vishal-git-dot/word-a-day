@@ -2,8 +2,8 @@ name: Word of the Day
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Every day at 6:00 AM UTC
-  workflow_dispatch:       # Manual trigger anytime
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   word-of-the-day:
@@ -19,16 +19,41 @@ jobs:
         run: |
           DATE=$(date '+%Y-%m-%d')
 
-          # Fetch random word data from Free Dictionary API
-          WORD_DATA=$(curl -s "https://api.dictionaryapi.dev/api/v2/entries/en/$(curl -s 'https://random-word-api.herokuapp.com/word' | tr -d '[""]')")
+          # Pick a word based on the day of the year (cycles through list)
+          DAY_NUM=$(date '+%j' | sed 's/^0*//')
 
-          WORD=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['word'])" 2>/dev/null)
-          PHONETIC=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0].get('phonetic','N/A'))" 2>/dev/null)
-          WORD_TYPE=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['partOfSpeech'])" 2>/dev/null)
-          DEFINITION=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['definitions'][0]['definition'])" 2>/dev/null)
-          EXAMPLE=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['definitions'][0].get('example','No example available.'))" 2>/dev/null)
+          WORDS=(
+            "serendipity" "ephemeral" "eloquent" "resilience" "ambiguous"
+            "persevere" "intricate" "benevolent" "pragmatic" "melancholy"
+            "tenacious" "versatile" "meticulous" "luminous" "profound"
+            "ardent" "candid" "diligent" "enigmatic" "fervent"
+            "gracious" "humble" "innovative" "jubilant" "kinetic"
+            "lucid" "meander" "nuance" "obsolete" "pensive"
+            "quaint" "radiant" "serene" "tranquil" "ubiquitous"
+            "vivid" "whimsical" "xenial" "yearning" "zealous"
+            "aberrant" "blithe" "cacophony" "daunting" "ebullient"
+            "facetious" "garrulous" "halcyon" "impeccable" "jubilee"
+            "keen" "loquacious" "mundane" "nonchalant" "opulent"
+            "placid" "querulous" "reticent" "sagacious" "tenuous"
+            "umbrage" "verbose" "wistful" "xenophile" "yonder"
+            "zeal" "acumen" "brevity" "cognizant" "deft"
+            "empathy" "fortitude" "gratitude" "harmony" "integrity"
+          )
 
-          # Append to WORD-OF-THE-DAY.md
+          WORD_COUNT=${#WORDS[@]}
+          INDEX=$((($DAY_NUM - 1) % $WORD_COUNT))
+          SELECTED_WORD="${WORDS[$INDEX]}"
+
+          # Fetch from Free Dictionary API
+          WORD_DATA=$(curl -s --max-time 10 "https://api.dictionaryapi.dev/api/v2/entries/en/$SELECTED_WORD")
+
+          # Parse with Python
+          WORD=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['word'])")
+          PHONETIC=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0].get('phonetic','N/A'))")
+          WORD_TYPE=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['partOfSpeech'])")
+          DEFINITION=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['definitions'][0]['definition'])")
+          EXAMPLE=$(echo "$WORD_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['meanings'][0]['definitions'][0].get('example','No example available.'))")
+
           cat >> WORD-OF-THE-DAY.md << EOF
 
           ---
