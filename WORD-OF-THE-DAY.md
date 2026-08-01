@@ -17,14 +17,6 @@
 - 💬 **Example:** *No example available.*
 
 ---
-### 📅 2026-07-31
-## 📖 verbose
-- 🔊 **Pronunciation:** /vəˈbəʊs/
-- 🏷️ **Type:** adjective
-- 📝 **Definition:** Abounding in words, containing more words than necessary; long-winded.
-- 💬 **Example:** *No example available.*
-
----
 ### 📅 2026-08-01
 ## 📖 wistful
 - 🔊 **Pronunciation:** /ˈwɪstfəl/
