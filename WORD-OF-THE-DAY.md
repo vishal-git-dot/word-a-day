@@ -23,3 +23,11 @@
 - 🏷️ **Type:** adjective
 - 📝 **Definition:** Full of longing or yearning.
 - 💬 **Example:** *His eyes grew wistful as he recalled his university days.*
+
+---
+### 📅 2026-08-03
+## 📖 yonder
+- 🔊 **Pronunciation:** N/A
+- 🏷️ **Type:** adverb
+- 📝 **Definition:** To that place.
+- 💬 **Example:** *No example available.*
