@@ -58,11 +58,11 @@ jobs:
               check_date = (datetime.now(timezone.utc) - timedelta(days=i)).strftime("%Y-%m-%d")
 
               # Duplicate check
-              if f"### {check_date}" in existing:
-                  print(f"✅ {check_date} already exists — skipping")
+              if f"### \U0001f4c5 {check_date}" in existing:
+                  print(f"OK {check_date} already exists, skipping")
                   continue
 
-              print(f"➕ Adding entry for {check_date}...")
+              print(f"Adding entry for {check_date}...")
 
               # Pick word by day of year so same date always gets same word
               day_num = int((datetime.strptime(check_date, "%Y-%m-%d")).strftime("%j"))
@@ -75,27 +75,37 @@ jobs:
                   req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
                   with urllib.request.urlopen(req, timeout=15) as response:
                       data = json.loads(response.read().decode())
-                  word      = data[0]["word"]
-                  phonetic  = data[0].get("phonetic", "N/A")
-                  word_type = data[0]["meanings"][0]["partOfSpeech"]
+                  word       = data[0]["word"]
+                  phonetic   = data[0].get("phonetic", "N/A")
+                  word_type  = data[0]["meanings"][0]["partOfSpeech"]
                   definition = data[0]["meanings"][0]["definitions"][0]["definition"]
-                  example   = data[0]["meanings"][0]["definitions"][0].get("example", "No example available.")
+                  example    = data[0]["meanings"][0]["definitions"][0].get("example", "No example available.")
               except Exception as e:
-                  print(f"⚠️ API error for '{selected_word}': {e} — using fallback")
+                  print(f"API error for {selected_word}: {e}, using fallback")
                   word, phonetic, word_type = selected_word, "N/A", "N/A"
                   definition, example = "Definition temporarily unavailable.", "No example available."
 
-              # Build entry using Python string (no special chars in YAML)
-              entry = (
-                  "\n\n"
-                  + "<!-- entry -->\n"
-                  + f"### {check_date}\n\n"
-                  + f"**Word:** {word}\n\n"
-                  + f"- Pronunciation: {phonetic}\n"
-                  + f"- Type: {word_type}\n"
-                  + f"- Definition: {definition}\n"
-                  + f"- Example: {example}\n"
-              )
+              # Build entry with emojis via unicode escapes (safe in YAML)
+              cal    = "\U0001f4c5"
+              book   = "\U0001f4d6"
+              sound  = "\U0001f50a"
+              label  = "\U0001f3f7\ufe0f"
+              pencil = "\U0001f4dd"
+              bubble = "\U0001f4ac"
+
+              lines = [
+                  "",
+                  "<hr/>",
+                  "",
+                  f"### {cal} {check_date}",
+                  f"## {book} {word}",
+                  f"- {sound} **Pronunciation:** {phonetic}",
+                  f"- {label} **Type:** {word_type}",
+                  f"- {pencil} **Definition:** {definition}",
+                  f"- {bubble} **Example:** *{example}*",
+                  "",
+              ]
+              entry = "\n".join(lines)
 
               with open(FILE, "a") as f:
                   f.write(entry)
@@ -107,7 +117,7 @@ jobs:
               if i > 0:
                   time.sleep(2)
 
-          print(f"✅ Done — {added} new entries added.")
+          print(f"Done. {added} new entries added.")
           PYEOF
 
       - name: Commit and push
@@ -116,7 +126,7 @@ jobs:
           git config user.email "214489076+vishal-git-dot@users.noreply.github.com"
           git add WORD-OF-THE-DAY.md
           if git diff --cached --quiet; then
-            echo "Nothing new to commit — already up to date."
+            echo "Nothing new to commit, already up to date."
           else
             git commit -m "Word of the Day $(date '+%Y-%m-%d')"
             git push
