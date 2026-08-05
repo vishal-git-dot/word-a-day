@@ -62,3 +62,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** The fervour or tireless devotion for a person, cause, or ideal and determination in its furtherance; diligent enthusiasm; powerful interest.
 - 💬 **Example:** *She extols the virtues of veganism with missionary zeal.*
+
+<hr/>
+
+### 📅 2026-08-05
+## 📖 acumen
+- 🔊 **Pronunciation:** /əˈkjuːmən/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** Quickness of perception or discernment; penetration of mind; the faculty of nice discrimination.
+- 💬 **Example:** *No example available.*
