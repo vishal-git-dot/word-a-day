@@ -71,3 +71,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** Quickness of perception or discernment; penetration of mind; the faculty of nice discrimination.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-06
+## 📖 brevity
+- 🔊 **Pronunciation:** /ˈbɹɛvəti/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** The quality of being brief in duration.
+- 💬 **Example:** *No example available.*
