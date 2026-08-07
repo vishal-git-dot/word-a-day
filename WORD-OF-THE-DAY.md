@@ -80,3 +80,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** The quality of being brief in duration.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-07
+## 📖 cognizant
+- 🔊 **Pronunciation:** /ˈkɒnɪzənt/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Aware; fully informed; having understanding of a fact
+- 💬 **Example:** *The defendant is cognizant that this is a serious charge.*
