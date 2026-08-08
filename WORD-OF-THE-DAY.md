@@ -89,3 +89,12 @@
 - 🏷️ **Type:** adjective
 - 📝 **Definition:** Aware; fully informed; having understanding of a fact
 - 💬 **Example:** *The defendant is cognizant that this is a serious charge.*
+
+<hr/>
+
+### 📅 2026-08-08
+## 📖 deft
+- 🔊 **Pronunciation:** /dɛft/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Quick and neat in action; skillful.
+- 💬 **Example:** *He assembled it in one fluid, deft motion.*
