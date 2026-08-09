@@ -98,3 +98,12 @@
 - 🏷️ **Type:** adjective
 - 📝 **Definition:** Quick and neat in action; skillful.
 - 💬 **Example:** *He assembled it in one fluid, deft motion.*
+
+<hr/>
+
+### 📅 2026-08-09
+## 📖 empathy
+- 🔊 **Pronunciation:** /ˈɛmpəθi/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** Identification with or understanding of the thoughts, feelings, or emotional state of another person.
+- 💬 **Example:** *She had a lot of empathy for her neighbor; she knew what it was like to lose a parent too.*
