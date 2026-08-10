@@ -107,3 +107,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** Identification with or understanding of the thoughts, feelings, or emotional state of another person.
 - 💬 **Example:** *She had a lot of empathy for her neighbor; she knew what it was like to lose a parent too.*
+
+<hr/>
+
+### 📅 2026-08-10
+## 📖 fortitude
+- 🔊 **Pronunciation:** /ˈfɔːtɪtjuːd/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** Mental or emotional strength that enables courage in the face of adversity.
+- 💬 **Example:** *No example available.*
