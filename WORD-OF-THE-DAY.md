@@ -116,3 +116,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** Mental or emotional strength that enables courage in the face of adversity.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-11
+## 📖 gratitude
+- 🔊 **Pronunciation:** /ˈɡɹætɪt(j)ud/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** The state of being grateful.
+- 💬 **Example:** *No example available.*
