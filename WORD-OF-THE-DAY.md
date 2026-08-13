@@ -134,3 +134,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** Agreement or accord.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-13
+## 📖 integrity
+- 🔊 **Pronunciation:** /ɪnˈtɛɡɹəti/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** Steadfast adherence to a strict moral or ethical code.
+- 💬 **Example:** *No example available.*
