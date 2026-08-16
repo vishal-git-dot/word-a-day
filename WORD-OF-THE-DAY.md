@@ -161,3 +161,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** Something which lasts for a short period of time.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-16
+## 📖 eloquent
+- 🔊 **Pronunciation:** /ˈɛl.əˌkwənt/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Fluently persuasive and articulate
+- 💬 **Example:** *No example available.*
