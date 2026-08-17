@@ -170,3 +170,12 @@
 - 🏷️ **Type:** adjective
 - 📝 **Definition:** Fluently persuasive and articulate
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-17
+## 📖 resilience
+- 🔊 **Pronunciation:** /ɹə.zɪl.ɪ.əns/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** The mental ability to recover quickly from depression, illness or misfortune.
+- 💬 **Example:** *No example available.*
