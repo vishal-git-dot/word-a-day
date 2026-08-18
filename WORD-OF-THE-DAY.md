@@ -179,3 +179,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** The mental ability to recover quickly from depression, illness or misfortune.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-18
+## 📖 ambiguous
+- 🔊 **Pronunciation:** /æmˈbɪɡjuəs/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Open to multiple interpretations.
+- 💬 **Example:** *The politician was criticized for his ambiguous statements and lack of precision.*
