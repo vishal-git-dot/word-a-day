@@ -197,3 +197,12 @@
 - 🏷️ **Type:** N/A
 - 📝 **Definition:** Definition temporarily unavailable.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-20
+## 📖 intricate
+- 🔊 **Pronunciation:** /ˈɪn.tɹɪ.kət/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Having a great deal of fine detail or complexity.
+- 💬 **Example:** *The architecture of this clock is very intricate.*
