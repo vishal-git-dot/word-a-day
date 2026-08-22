@@ -215,3 +215,12 @@
 - 🏷️ **Type:** adjective
 - 📝 **Definition:** Having a disposition to do good.
 - 💬 **Example:** *Chinese and Eastern mythologies describe dragons as benevolent.*
+
+<hr/>
+
+### 📅 2026-08-22
+## 📖 pragmatic
+- 🔊 **Pronunciation:** /pɹæɡˈmætɪk/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** A man of business.
+- 💬 **Example:** *No example available.*
