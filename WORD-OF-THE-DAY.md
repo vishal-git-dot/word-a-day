@@ -224,3 +224,12 @@
 - 🏷️ **Type:** noun
 - 📝 **Definition:** A man of business.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-23
+## 📖 melancholy
+- 🔊 **Pronunciation:** /ˈmelənkəli/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** Black bile, formerly thought to be one of the four "cardinal humours" of animal bodies.
+- 💬 **Example:** *No example available.*
