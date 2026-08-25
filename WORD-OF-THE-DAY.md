@@ -242,3 +242,12 @@
 - 🏷️ **Type:** N/A
 - 📝 **Definition:** Definition temporarily unavailable.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-25
+## 📖 versatile
+- 🔊 **Pronunciation:** /ˈvɝsətl̩/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Capable of doing many things competently.
+- 💬 **Example:** *No example available.*
