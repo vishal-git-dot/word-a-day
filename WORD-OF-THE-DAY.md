@@ -251,3 +251,12 @@
 - 🏷️ **Type:** adjective
 - 📝 **Definition:** Capable of doing many things competently.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-26
+## 📖 meticulous
+- 🔊 **Pronunciation:** N/A
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Characterized by very precise, conscientious attention to details.
+- 💬 **Example:** *No example available.*
