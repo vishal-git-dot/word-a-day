@@ -269,3 +269,12 @@
 - 🏷️ **Type:** N/A
 - 📝 **Definition:** Definition temporarily unavailable.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-28
+## 📖 profound
+- 🔊 **Pronunciation:** /pɹəˈfaʊnd/
+- 🏷️ **Type:** noun
+- 📝 **Definition:** The deep; the sea; the ocean.
+- 💬 **Example:** *No example available.*
