@@ -296,3 +296,12 @@
 - 🏷️ **Type:** N/A
 - 📝 **Definition:** Definition temporarily unavailable.
 - 💬 **Example:** *No example available.*
+
+<hr/>
+
+### 📅 2026-08-31
+## 📖 diligent
+- 🔊 **Pronunciation:** /ˈdɪlɪdʒənt/
+- 🏷️ **Type:** adjective
+- 📝 **Definition:** Performing with industrious concentration; hard-working and focused.
+- 💬 **Example:** *Scientists are very diligent in their work.*
